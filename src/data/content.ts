@@ -109,11 +109,12 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "cargoquote",
     title: "CargoQuote",
-    category: "Practical web app",
+    category: "Logistics software",
     description:
-      "A web application that produces cargo and shipping quotes from shipment information.",
-    techStack: ["Web development"],
-    labels: [],
+      "A smart international shipping cost calculator that compares air, sea and road freight using chargeable weight, landed cost, Incoterms, risk and carbon estimates. It then explains which option is cheapest, fastest or most balanced, turning messy freight decisions into a clear professional tool — the kind of problem WiseTech works on in global logistics.",
+    techStack: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    labels: ["LIVE", "DEPLOYED"],
+    featured: true,
     githubUrl: "https://github.com/Minerafter9/cargoquote",
     liveUrl: "https://cargoquote-kappa.vercel.app/",
     accent: "amber",
