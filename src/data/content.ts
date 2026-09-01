@@ -78,6 +78,7 @@ export const FEATURED_PROJECTS: Project[] = [
     ],
     labels: ["LIVE", "DEPLOYED", "FULL STACK"],
     featured: true,
+    liveUrl: "https://eazy-meal.vercel.app/",
     accent: "cyan",
   },
   {
@@ -113,6 +114,8 @@ export const FEATURED_PROJECTS: Project[] = [
       "A web application that produces cargo and shipping quotes from shipment information.",
     techStack: ["Web development"],
     labels: [],
+    githubUrl: "https://github.com/Minerafter9/cargoquote",
+    liveUrl: "https://cargoquote-kappa.vercel.app/",
     accent: "amber",
   },
 ];

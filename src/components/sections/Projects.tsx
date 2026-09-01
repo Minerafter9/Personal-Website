@@ -35,7 +35,7 @@ function ProjectLinks({ project }: { project: Project }) {
       {project.liveUrl && (
         <Button
           href={project.liveUrl}
-          variant="outline"
+          variant={project.prUrl ? "outline" : "primary"}
           target="_blank"
           rel="noopener noreferrer"
         >
