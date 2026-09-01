@@ -1,12 +1,17 @@
 # William Saunders — Software Engineering Portfolio
 
-A modern personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS.
+A modern, responsive student engineering portfolio built with Next.js, React,
+TypeScript, and Tailwind CSS.
+
+The site includes recruiter-focused project case studies, an experience timeline,
+achievement templates, grouped technical skills, a printable resume snapshot, active
+section navigation, and accessible mobile layouts.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) 18.17 or later
+- [Node.js](https://nodejs.org/) 20.9 or later
 - npm (included with Node.js)
 
 ### Run locally
@@ -73,9 +78,17 @@ vercel --prod
 
 ## Customisation
 
-Update placeholder links and personal details in:
+All editable portfolio content is kept in one place:
 
-- `src/data/content.ts` — site info, projects, resume, and contact links
+- `src/data/content.ts`
+
+Known public links currently included:
+
+- GitHub: `https://github.com/Minerafter9`
+- WTG.Analyzers PR: `https://github.com/WiseTechGlobal/WTG.Analyzers/pull/243`
+
+Add email, LinkedIn, live demo URLs or a resume PDF in `src/data/content.ts` only when
+those files or profiles actually exist. Do not leave placeholder URLs in the UI.
 
 ## Project Structure
 
@@ -84,6 +97,7 @@ src/
 ├── app/              # Next.js App Router pages and layout
 ├── components/
 │   ├── sections/     # Page sections (Hero, About, Projects, etc.)
+│   ├── projects/     # Custom project preview visuals
 │   └── ui/           # Reusable UI components
 ├── data/             # Site content and constants
 └── types/            # TypeScript interfaces
