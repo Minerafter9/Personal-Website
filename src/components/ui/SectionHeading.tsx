@@ -1,19 +1,34 @@
-import type { ReactNode } from "react";
-
 interface SectionHeadingProps {
+  eyebrow?: string;
   title: string;
   subtitle?: string;
+  align?: "left" | "center";
 }
 
-export default function SectionHeading({ title, subtitle }: SectionHeadingProps) {
+export default function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+  align = "left",
+}: SectionHeadingProps) {
+  const centered = align === "center";
+
   return (
-    <div className="mb-10 sm:mb-12">
-      <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+    <div className={`mb-11 sm:mb-14 ${centered ? "mx-auto text-center" : ""}`}>
+      {eyebrow && (
+        <p className={`eyebrow mb-4 ${centered ? "justify-center" : ""}`}>
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-ink sm:text-4xl lg:text-[2.75rem]">
         {title}
       </h2>
-      <div className="mt-3 h-1 w-12 rounded-full bg-gradient-to-r from-accent-blue to-accent-cyan" />
       {subtitle && (
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
+        <p
+          className={`mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg ${
+            centered ? "mx-auto" : ""
+          }`}
+        >
           {subtitle}
         </p>
       )}

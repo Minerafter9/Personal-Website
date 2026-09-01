@@ -1,12 +1,33 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "William Saunders | Software Engineering Portfolio",
+  title: {
+    default: "William Saunders | Software Engineering Portfolio",
+    template: "%s | William Saunders",
+  },
   description:
-    "Portfolio of William Saunders — Year 12 student showcasing software engineering projects in web development, algorithms, databases, and more.",
+    "Year 12 aspiring software engineer. Full-stack projects including EazyMeal, a merged contribution to WiseTech Global’s WTG.Analyzers, and national cybersecurity competition results.",
+  keywords: [
+    "William Saunders",
+    "software engineering portfolio",
+    "Year 12 student",
+    "full-stack development",
+    "WTG.Analyzers",
+  ],
+  openGraph: {
+    title: "William Saunders | Software Engineering Portfolio",
+    description:
+      "Year 12 aspiring software engineer with full-stack, cybersecurity and open-source contribution work.",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#140A2E",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -16,9 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen overflow-x-hidden antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

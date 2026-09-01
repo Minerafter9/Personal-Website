@@ -18,11 +18,11 @@ type Props = ButtonProps | LinkProps;
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent-blue text-white hover:bg-[#3d8fe6] hover:shadow-lg hover:shadow-accent-blue/20",
+    "border border-accent-cyan bg-accent-cyan text-[#071817] shadow-[0_10px_34px_rgba(110,247,232,0.16)] hover:-translate-y-0.5 hover:bg-white hover:border-white hover:shadow-[0_14px_44px_rgba(110,247,232,0.24)]",
   secondary:
-    "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30 hover:bg-accent-cyan/20 hover:border-accent-cyan/50",
+    "border border-accent-blue/35 bg-accent-blue/10 text-[#b8d9ff] hover:-translate-y-0.5 hover:border-accent-blue/65 hover:bg-accent-blue/15 hover:text-white",
   outline:
-    "border border-white/20 text-slate-200 hover:border-accent-blue/50 hover:text-white hover:bg-white/5",
+    "border border-white/14 bg-white/[0.025] text-slate-200 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06] hover:text-white",
 };
 
 export default function Button({
@@ -32,7 +32,7 @@ export default function Button({
   ...props
 }: Props) {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:ring-offset-2 focus-visible:ring-offset-bg-dark";
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-45";
 
   const classes = `${baseClasses} ${variants[variant]} ${className}`;
 

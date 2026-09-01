@@ -4,15 +4,21 @@ interface SectionProps {
   id: string;
   children: ReactNode;
   className?: string;
+  containerClassName?: string;
 }
 
-export default function Section({ id, children, className = "" }: SectionProps) {
+export default function Section({
+  id,
+  children,
+  className = "",
+  containerClassName = "",
+}: SectionProps) {
   return (
     <section
       id={id}
-      className={`scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 ${className}`}
+      className={`relative scroll-mt-24 px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28 ${className}`}
     >
-      <div className="mx-auto max-w-6xl">{children}</div>
+      <div className={`mx-auto max-w-7xl ${containerClassName}`}>{children}</div>
     </section>
   );
 }
