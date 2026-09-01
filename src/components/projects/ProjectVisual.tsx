@@ -5,7 +5,9 @@ import {
   Code2,
   GitBranch,
   LayoutDashboard,
+  Plane,
   Shield,
+  Ship,
   Truck,
   UtensilsCrossed,
 } from "lucide-react";
@@ -119,15 +121,25 @@ function CargoVisual() {
     <Frame title="CARGOQUOTE" tone="amber">
       <div className="flex items-center gap-2 text-accent-amber">
         <Truck className="h-3.5 w-3.5" />
-        <span className="font-mono text-[0.55rem]">shipment → quote</span>
+        <span className="font-mono text-[0.55rem]">air · sea · road</span>
       </div>
-      <div className="mt-3 grid grid-cols-2 gap-2">
-        <div className="rounded-md border border-white/[0.07] p-2 font-mono text-[0.42rem] text-slate-400">
-          origin / dest
-        </div>
-        <div className="rounded-md border border-white/[0.07] p-2 font-mono text-[0.42rem] text-slate-400">
-          cargo details
-        </div>
+      <div className="mt-3 grid grid-cols-3 gap-2">
+        {[
+          { icon: Plane, label: "Air" },
+          { icon: Ship, label: "Sea" },
+          { icon: Truck, label: "Road" },
+        ].map(({ icon: Icon, label }) => (
+          <div
+            key={label}
+            className="flex flex-col items-center gap-1 rounded-md border border-white/[0.07] bg-white/[0.03] px-2 py-2 text-slate-300"
+          >
+            <Icon className="h-3 w-3 text-accent-amber" />
+            <span className="font-mono text-[0.42rem]">{label}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 rounded-md border border-accent-amber/20 bg-accent-amber/[0.06] p-2 font-mono text-[0.42rem] leading-4 text-slate-400">
+        cheapest · fastest · balanced
       </div>
     </Frame>
   );
