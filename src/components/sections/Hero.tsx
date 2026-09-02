@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Code2, FileText, GitBranch } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Code2, GitBranch } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { HERO_HIGHLIGHTS, HERO_TAGS, SITE } from "@/data/content";
 
@@ -41,14 +41,6 @@ export default function Hero() {
               <Button href="#projects">
                 View Projects
                 <ArrowDown className="h-4 w-4" />
-              </Button>
-              <Button
-                href={SITE.resume}
-                download="William-Saunders-Resume.pdf"
-                variant="secondary"
-              >
-                <FileText className="h-4 w-4" />
-                Resume
               </Button>
               <Button
                 href={SITE.github}

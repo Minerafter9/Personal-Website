@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, FileText, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/data/content";
 
 export default function Navbar() {
@@ -84,13 +84,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href="/resume"
-            className="hidden items-center gap-1.5 rounded-xl border border-white/10 px-3 py-2 text-[0.78rem] font-medium text-slate-200 transition-colors hover:border-accent-cyan/30 hover:text-white sm:inline-flex"
-          >
-            <FileText className="h-3.5 w-3.5" />
-            Resume
-          </a>
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-slate-300 transition-colors hover:bg-white/[0.06] hover:text-white lg:hidden"
@@ -126,15 +119,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a
-            href={SITE.resume}
-            download="William-Saunders-Resume.pdf"
-            onClick={handleNavClick}
-            className="mt-2 flex items-center justify-between rounded-xl border border-white/10 px-4 py-3 text-sm font-semibold text-slate-100"
-          >
-            Download resume
-            <FileText className="h-4 w-4" />
-          </a>
           <a
             href={sectionHref("#contact")}
             onClick={handleNavClick}

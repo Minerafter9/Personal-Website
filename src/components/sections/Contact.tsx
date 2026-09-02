@@ -1,12 +1,10 @@
-import { ArrowUpRight, FileText, GitBranch, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, GitBranch, Mail } from "lucide-react";
 import Section from "@/components/ui/Section";
 import { CONTACT_LINKS, SITE } from "@/data/content";
 
 const contactIcons = {
   github: GitBranch,
   email: Mail,
-  resume: FileText,
-  phone: Phone,
 };
 
 export default function Contact() {
@@ -15,7 +13,7 @@ export default function Contact() {
       <div className="rounded-[1.6rem] border border-white/[0.09] bg-white/[0.03] p-7 sm:p-10 lg:p-12">
         <p className="eyebrow mb-5">06 / Contact</p>
         <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-4xl">
-          Resume, email or GitHub.
+          Email or GitHub.
         </h2>
         <p className="mt-5 max-w-xl text-base leading-7 text-slate-300">
           I am a Year 12 student in {SITE.location} looking for software engineering
@@ -26,13 +24,10 @@ export default function Contact() {
           {CONTACT_LINKS.map((link) => {
             const Icon = contactIcons[link.kind];
             const external = link.href.startsWith("http");
-            const download =
-              link.kind === "resume" ? "William-Saunders-Resume.pdf" : undefined;
             return (
               <a
                 key={link.label}
                 href={link.href}
-                download={download}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
                 className="group flex items-center gap-4 rounded-2xl border border-white/[0.09] bg-black/10 p-4 transition-colors hover:border-accent-cyan/25"
