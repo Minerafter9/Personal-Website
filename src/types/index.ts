@@ -54,5 +54,5 @@ export interface ContactLink {
   label: string;
   href: string;
   description: string;
-  kind: "github" | "email" | "resume" | "phone";
+  kind: "github" | "email";
 }

@@ -1,16 +1,8 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import { ArrowUp } from "lucide-react";
 import { SITE } from "@/data/content";
 
 export default function Footer() {
-  const pathname = usePathname();
   const year = new Date().getFullYear();
-
-  if (pathname === "/resume") {
-    return null;
-  }
 
   return (
     <footer className="border-t border-white/[0.07] px-5 py-8 sm:px-8 lg:px-10">
@@ -24,13 +16,6 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-5">
-          <a
-            href={SITE.resume}
-            download="William-Saunders-Resume.pdf"
-            className="text-xs text-slate-500 transition-colors hover:text-white"
-          >
-            Resume
-          </a>
           <a
             href={SITE.github}
             target="_blank"

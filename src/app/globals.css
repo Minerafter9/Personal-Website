@@ -186,16 +186,4 @@ a {
   body {
     background: white !important;
   }
-
-  .resume-page {
-    background: white !important;
-    padding: 0 !important;
-    min-height: auto !important;
-  }
-
-  .resume-sheet {
-    box-shadow: none !important;
-    max-width: none !important;
-    padding: 12mm !important;
-  }
 }

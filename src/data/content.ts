@@ -19,11 +19,8 @@ export const SITE = {
   github: "https://github.com/Minerafter9",
   githubHandle: "github.com/Minerafter9",
   email: "will.saunders.business@gmail.com",
-  phone: "0493 037 614",
-  phoneHref: "tel:+61493037614",
   location: "Canberra, ACT",
   website: "https://personal-website-three-omega-71.vercel.app/",
-  resume: "/william-saunders-resume.pdf",
 } as const;
 
 export const NAV_LINKS: NavLink[] = [
@@ -347,12 +344,6 @@ export const EDUCATION = {
 
 export const CONTACT_LINKS: ContactLink[] = [
   {
-    label: "Resume",
-    href: SITE.resume,
-    description: "Download PDF",
-    kind: "resume",
-  },
-  {
     label: "Email",
     href: `mailto:${SITE.email}`,
     description: SITE.email,
@@ -363,11 +354,5 @@ export const CONTACT_LINKS: ContactLink[] = [
     href: SITE.github,
     description: SITE.githubHandle,
     kind: "github",
-  },
-  {
-    label: "Phone",
-    href: SITE.phoneHref,
-    description: SITE.phone,
-    kind: "phone",
   },
 ];
